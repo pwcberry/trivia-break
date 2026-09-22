@@ -1,0 +1,22 @@
+services:
+  database:
+    image: postgres:alpine
+    container_name: trivia-break-postgresql
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${PGUSER:-trivia_master}
+      POSTGRES_PASSWORD: ${PGPASSWORD:?Set PGPASSWORD in .env (see .env.example)}
+      POSTGRES_DB: ${PGDATABASE:-trivia_break}
+    volumes:
+      - ./docker/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+      - db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  db_data:
+    driver: local
