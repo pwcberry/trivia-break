@@ -1,4 +1,5 @@
 import type { RoomSettings } from "../protocol.js";
+import { clampInt } from "../util/math.js";
 
 export const DEFAULT_SETTINGS: RoomSettings = {
   name: "Trivia Break",
@@ -15,13 +16,7 @@ const LIMITS = {
   choicesPerAnswer: { min: 2, max: 5 },
 };
 
-function clampInt(value: unknown, fallback: number, min: number, max: number): number {
-  const n = typeof value === "number" ? Math.floor(value) : NaN;
-  if (Number.isNaN(n)) {
-    return fallback;
-  }
-  return Math.min(max, Math.max(min, n));
-}
+
 
 /**
  * Normalise partial/untrusted settings into a valid RoomSettings, clamping each
