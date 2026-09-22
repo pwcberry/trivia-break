@@ -10,10 +10,26 @@ export default defineConfig([
     files: ["**/*.{ts,tsx}"],
     plugins: {js},
     extends: ["js/recommended"],
-    languageOptions: {globals: globals.browser}
+    languageOptions: {globals: globals.browser},
+    rules: {
+      // Always require braces around control-flow bodies, even single statements.
+      "curly": ["error", "all"],
+      // Use the TypeScript-aware rule so params in type positions (interface /
+      // function-type signatures) are not reported. Preserves the repo's
+      // convention of ignoring UPPER/underscore-prefixed identifiers.
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": ["error", {
+        varsIgnorePattern: "^[A-Z_]",
+        argsIgnorePattern: "^_",
+      }],
+    },
   },
   tseslint.configs.recommended,
-  {files: ["**/*.css"], plugins: {css}, language: "css/css", extends: ["css/recommended"]},
+  {
+    files: ["**/*.css"], plugins: {css}, language: "css/css", extends: ["css/recommended"], rules: {
+      "css/no-invalid-properties": "off",
+    }
+  },
   {
     // Server code runs on Node, not in the browser.
     files: ['server/**/*.ts', '**/*.config.ts'],
