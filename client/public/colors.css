@@ -1,0 +1,64 @@
+/* Trivial Pursuit Game - Color Scheme */
+/* Based on the classic six categories and retro aesthetic */
+
+:root {
+  /* === PRIMARY CATEGORY COLORS === */
+  /* The six classic Trivial Pursuit categories */
+
+  /* Geography - Blue */
+  --color-category-geography: #1e5a96;
+  --color-category-geography-light: #2e7cb8;
+  --color-category-geography-pale: #e6f0f7;
+
+  /* Entertainment - Pink/Magenta */
+  --color-category-entertainment: #d91e63;
+  --color-category-entertainment-light: #ec407a;
+  --color-category-entertainment-pale: #fce4ec;
+
+  /* History - Yellow */
+  --color-category-history: #fbc02d;
+  --color-category-history-light: #fdd835;
+  --color-category-history-pale: #fffde7;
+
+  /* Arts & Literature - Brown */
+  --color-category-arts: #6d4c41;
+  --color-category-arts-light: #8d6e63;
+  --color-category-arts-pale: #efebe9;
+
+  /* Science & Nature - Green */
+  --color-category-science: #388e3c;
+  --color-category-science-light: #43a047;
+  --color-category-science-pale: #e8f5e9;
+
+  /* Sports & Leisure - Orange/Red */
+  --color-category-sports: #e64a19;
+  --color-category-sports-light: #ff6f00;
+  --color-category-sports-pale: #ffe0b2;
+
+  /* === RETRO AESTHETIC COLORS === */
+  /* Supporting colors for the classic 80s/90s Trivial Pursuit look */
+
+  /* Game board and backgrounds */
+  --color-board-background: #1a1a1a;
+  --color-board-accent: #ffffff;
+  --color-tile-background: #2d2d2d;
+
+  /* Text and UI */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-dark: #1a1a1a;
+
+  /* Borders and dividers */
+  --color-border-light: #404040;
+  --color-border-medium: #5a5a5a;
+
+  /* Interactive elements */
+  --color-button-hover: #4a4a4a;
+  --color-highlight: #ffff00;
+  --color-shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Special states */
+  --color-success: #76c043;
+  --color-error: #c62828;
+  --color-warning: #ffa500;
+}

@@ -1,0 +1,143 @@
+:root {
+  font-size: 24px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100svh;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  background-color: var(--color-board-background);
+}
+
+/* === CATEGORY COLOR MAPS === */
+/* Use these classes for quick category styling */
+
+.category-geography {
+  background-color: var(--color-category-geography);
+  color: var(--color-text-primary);
+}
+
+.category-entertainment {
+  background-color: var(--color-category-entertainment);
+  color: var(--color-text-primary);
+}
+
+.category-history {
+  background-color: var(--color-category-history);
+  color: var(--color-text-dark);
+}
+
+.category-arts {
+  background-color: var(--color-category-arts);
+  color: var(--color-text-primary);
+}
+
+.category-science {
+  background-color: var(--color-category-science);
+  color: var(--color-text-primary);
+}
+
+.category-sports {
+  background-color: var(--color-category-sports);
+  color: var(--color-text-primary);
+}
+
+/* Light variants for backgrounds */
+.category-geography-light {
+  background-color: var(--color-category-geography-pale);
+  color: var(--color-text-dark);
+}
+
+.category-entertainment-light {
+  background-color: var(--color-category-entertainment-pale);
+  color: var(--color-text-dark);
+}
+
+.category-history-light {
+  background-color: var(--color-category-history-pale);
+  color: var(--color-text-dark);
+}
+
+.category-arts-light {
+  background-color: var(--color-category-arts-pale);
+  color: var(--color-text-dark);
+}
+
+.category-science-light {
+  background-color: var(--color-category-science-pale);
+  color: var(--color-text-dark);
+}
+
+.category-sports-light {
+  background-color: var(--color-category-sports-pale);
+  color: var(--color-text-dark);
+}
+
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
