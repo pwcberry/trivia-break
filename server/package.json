@@ -1,0 +1,17 @@
+{
+  "name": "@trivia-break/server",
+  "version": "0.0.0",
+  "description": "The server implementation for the \"Trivia Break\" game.",
+  "license": "MIT",
+  "author": "Peter Berry",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/static": "^10.1.0",
+    "@fastify/websocket": "^11.3.0",
+    "fastify": "^5.10.0"
+  }
+}
